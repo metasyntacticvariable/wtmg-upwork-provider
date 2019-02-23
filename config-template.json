@@ -1,0 +1,38 @@
+{
+  "application" : "wtmg-provider-upwork",
+  "aws" : {
+    "region": "${REGION}"
+  },
+  "delayBetweenFiles" : 10000,
+  "lookup" : {
+    "url" : "${API_URL}",
+    "secret" : "${API_SECRET}"
+  },
+  "es" : {
+    "index" : "${ES_INDEX}",
+    "type" : "${ES_TYPE}",
+    "includeMonth" : false,
+    "enable" : "${ES_ENABLE}",
+    "delete" : "${ES_DELETE}",
+    "host" : "${ES_HOST}",
+    "port" : 9243,
+    "user" : "${ES_USER}",
+    "password" : "${ES_PASSWORD}"
+  },
+  "upwork" : {
+    "period" : {
+      "from" : "${PERIOD_FROM}",
+      "to" : "${PERIOD_TO}"
+    }
+  },
+  "s3" : {
+    "destination" : {
+      "prefix" : "${S3_DESTINATION_PREFIX}",
+      "bucket" : "${S3_DESTINATION_BUCKET}"
+    },
+    "source" : {
+      "prefix" : "${S3_SOURCE_PREFIX}",
+      "bucket" : "${S3_SOURCE_BUCKET}"
+    }
+  }
+}
